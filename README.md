@@ -11,8 +11,7 @@ Jalankan installer, ikuti wizard, dan pilih komponen yang ingin dipasang (misaln
 Selesaikan instalasi, lalu buka NetBeans untuk konfigurasi awal.
 
 
-###############
-langkah instal di vscode
+⚙️langkah instal di vscode
 search google 
 
 java downlaod yang oracle
