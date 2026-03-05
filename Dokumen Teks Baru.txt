@@ -1,0 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package latihan1;
+
+/**
+ *
+ * @author MAHASISWA
+ */
+public class Latihan1 {
+ String jenis,warna;
+ int usia;
+}
+        
+class main{
+    public static void main(String[] args) {
+        Latihan1 burung_elang = new Latihan1();
+        
+        burung_elang.jenis = "Elang sunda";
+        burung_elang.warna = "Hitam";
+        burung_elang.usia = 5;
+                
+        System.out.println("Jenis Burung" + burung_elang.jenis);
+        System.out.println("Warna Burung" + burung_elang.warna);
+        System.out.println("Usia Burung" + burung_elang.usia + "Tahun");
+    }
+    
+}
