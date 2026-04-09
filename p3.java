@@ -1,6 +1,20 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package latihan3;
+
 import java.util.Scanner;
 
-public class ProgramDiskon {
+/**
+ *
+ * @author MAHASISWA
+ */
+public class latihan3 {
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -16,7 +30,7 @@ public class ProgramDiskon {
 
         double diskonPersen = 0;
 
-        // Logika Aturan Diskon berdasarkan Status Member
+        
         if (statusMember == 'G') { // Gold
             if (totalBelanja >= 200000) {
                 diskonPersen = 20;
@@ -31,21 +45,19 @@ public class ProgramDiskon {
             }
         }
 
-        // Tambahan diskon jika punya voucher
+
         if (punyaVoucher) {
             diskonPersen += 5;
         }
 
-        // Batasan Maksimal Diskon Total (35%)
         if (diskonPersen > 35) {
             diskonPersen = 35;
         }
 
-        // Perhitungan Akhir
+
         double jumlahDiskon = totalBelanja * (diskonPersen / 100);
         double totalBayar = totalBelanja - jumlahDiskon;
 
-        // Output Hasil
         System.out.println("\n--- Rincian Pembayaran ---");
         System.out.println("Total Belanja  : Rp " + totalBelanja);
         System.out.println("Persen Diskon  : " + diskonPersen + "%");
@@ -55,4 +67,5 @@ public class ProgramDiskon {
         input.close();
     }
 }
+    
 
