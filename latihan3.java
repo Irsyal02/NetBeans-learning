@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package latihan3;
+package pb;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author MAHASISWA
  */
-public class latihan3 {
+public class PB {
 
     /**
      * @param args the command line arguments
@@ -48,7 +48,7 @@ public class latihan3 {
         
         System.out.print("Masukkan jumlah yang dibeli: ");
         int jumlahBeli = input.nextInt();
-
+        System.out.println("");
 
         double hargaSatuan = 0;
         String namaProduk = "";
@@ -57,12 +57,15 @@ public class latihan3 {
         switch(kodeProduk) {
                 case 'A':
                 namaProduk = "Dancow";
+                System.out.println("Dancow");
                   break;
                 case 'B':
                 namaProduk = "Bendera";
+                System.out.println("Bendera");
                   break;
                 case 'C':
                 namaProduk = "SGM";
+                System.out.println("SGM");
                   break;
                 default:
                 System.out.println("Kode ukuran tidak valid!");
@@ -76,19 +79,21 @@ public class latihan3 {
                 if (kodeProduk == 'A') hargaSatuan = 15000;
                 else if (kodeProduk == 'B') hargaSatuan = 130000;
                 else if (kodeProduk == 'C') hargaSatuan = 15000;
-
+                System.out.println("Ukuran Kecil");
                   break;
                 case 2:
                 ukuran = "Sedang";
                 if (kodeProduk == 'A') hargaSatuan = 20000;
                 else if (kodeProduk == 'B') hargaSatuan = 17000;
                 else if (kodeProduk == 'C') hargaSatuan = 18000;
+                System.out.println("Ukuran Sedang");
                   break;
                 case 3:
                 ukuran = "Besar";
                 if (kodeProduk == 'A') hargaSatuan = 250000;
                 else if (kodeProduk == 'B') hargaSatuan = 20000;
                 else if (kodeProduk == 'C') hargaSatuan = 27000;
+                System.out.println("Ukuran Besar");
                   // code block
                   break;
                 default:
@@ -98,13 +103,12 @@ public class latihan3 {
               }
 
         double totalBelanja = hargaSatuan * jumlahBeli;
-        double totalBayar = totalBelanja;
-                
-        System.out.println("Masukan Merk Susu [Dancow | Bendera | SGM] :" + kodeProduk);
-        System.out.println("Masukan Ukuran Kaleng [Kecil | Sedang | Besar]" + kodeUkuran);
         System.out.println("Harga Satuan Barang  : Rp" + hargaSatuan);
-        System.out.println("Jumlah Yang di beli" + totalBelanja);
-        System.out.println("harga Yang Harus dibayar Sebesar : Rp " + totalBayar);
+        System.out.println("Jumlah Yang di beli :" + jumlahBeli);
+        System.out.println("harga Yang Harus dibayar Sebesar : Rp " + totalBelanja);
+                
+//        System.out.println("Masukan Merk Susu [Dancow | Bendera | SGM] :" + kodeProduk);
+//        System.out.println("Masukan Ukuran Kaleng [Kecil | Sedang | Besar]" + kodeUkuran);
                 
         input.close();
     }
