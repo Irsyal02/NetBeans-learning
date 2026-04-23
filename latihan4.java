@@ -1,10 +1,26 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package pb;
+
 import java.util.Scanner;
 
-public class HitungParkir {
+/**
+ *
+ * @author MAHASISWA
+ */
+public class PB {
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+       
         
-        System.out.print("Masukkan jumlah kendaraan: ");
+        System.out.print("SOAL NOMOR 1");
+        System.out.print("\n Masukkan jumlah kendaraan: ");
         int jumlahKendaraan = input.nextInt();
         
         long totalPendapatan = 0;
@@ -17,29 +33,22 @@ public class HitungParkir {
             if (lamaParkir <= 2) {
                 biaya = 5000;
             } else {
-                // 5000 untuk 2 jam pertama + 3000 per jam sisanya
+          
                 biaya = 5000 + (lamaParkir - 2) * 3000;
             }
             
             System.out.println("Biaya kendaraan ke-" + i + ": Rp" + biaya);
             totalPendapatan += biaya;
         }
-
-        System.out.println("-----------------------------------");
         System.out.println("Total Pendapatan Hari Ini: Rp" + totalPendapatan);
-    }
-}
-
-
-
-
-public class DeretFibonacci {
-    public static void main(String[] args) {
-        int n = 9; // Jumlah bilangan yang ingin ditampilkan sesuai soal
+        
+ 
+        int n = 8;
         int n1 = 1, n2 = 1;
 
-        System.out.print("Deret Fibonacci: ");
-
+        System.out.print("\n S0AL NOMOR 2");
+        System.out.print("\n Deret Fibonacci: ");
+        System.out.print("");
         for (int i = 1; i <= n; i++) {
             System.out.print(n1 + (i == n ? "" : ", "));
             
@@ -47,14 +56,11 @@ public class DeretFibonacci {
             n1 = n2;
             n2 = berikutnya;
         }
-    }
-}
-
-
-public class BilanganPrima {
-    public static void main(String[] args) {
-        int batas = 20; // Mencari prima hingga angka 19 sesuai soal
-        System.out.print("Bilangan Prima: ");
+        
+        int batas = 20; 
+        System.out.print("\n");
+        System.out.print(" S0AL NOMOR 3");
+        System.out.print("\n Bilangan Prima: ");
 
         for (int i = 2; i <= batas; i++) {
             boolean isPrima = true;
@@ -70,5 +76,8 @@ public class BilanganPrima {
                 System.out.print(i + " ");
             }
         }
+        
     }
 }
+
+
