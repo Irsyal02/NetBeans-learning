@@ -1,68 +1,63 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package pb;
-
 import java.util.Scanner;
 
-/**
- *
- * @author MAHASISWA
- */
-public class PB {
+public class ManajemenNilaiMahasiswa {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-    /**
-     * @param args the command line arguments
-     */
-           public static void main(String[] args){
-           int i, j, k;
+        // 1. Input jumlah kelas, mahasiswa, dan semester
+        System.out.print("Masukkan jumlah Kelas: ");
+        int jmlKelas = input.nextInt();
+        System.out.print("Masukkan jumlah Mahasiswa per kelas: ");
+        int jmlMahasiswa = input.nextInt();
+        System.out.print("Masukkan jumlah Semester: ");
+        int jmlSemester = input.nextInt();
 
-           int[][][] data_jual = {
-               
-           {{100, 200, 300},
-           {150, 240, 360},
-           {250, 340, 460},
-           {250, 340, 460}},
-               
-           {{160, 250, 365},
-           {175, 275, 375},
-           {275, 375, 575},
-           {380, 480, 580}}
-                   
-           };
+        // Inisialisasi Array 3 Dimensi: nilai[kelas][mahasiswa][semester]
+        double[][][] nilai = new double[jmlKelas][jmlMahasiswa][jmlSemester];
 
-           System.out.println();
-           System.out.println("Data Penjualan Pertahun");
-           System.out.println("-------------------------------------- ");
-           System.out.println();
-           System.out.println("Tahun Hasil Tahun Penjualan Ke. ");
-           System.out.println();
-           System.out.println("Ke.  Ke. --------------------");
-           System.out.println();
-           System.out.println("                         1        2 ");
-           System.out.println("--------------------------------------");
-           System.out.println();
+        System.out.println("\n--- Input Data Nilai ---");
+        // 2. Mengisi nilai mahasiswa
+        for (int i = 0; i < jmlKelas; i++) {
+            for (int j = 0; j < jmlMahasiswa; j++) {
+                for (int k = 0; k < jmlSemester; k++) {
+                    System.out.printf("Nilai Kelas %d, Mahasiswa %d, Semester %d: ", (i + 1), (j + 1), (k + 1));
+                    nilai[i][j][k] = input.nextDouble();
+                }
+            }
+            System.out.println(); // Spasi antar kelas
+        }
 
-           for(i=0;i<2;i++){
-           for(j=0;j<3;j++){
-           System.out.print((i+1) + "\t");
-           System.out.print((j+1) + "\t\t");
-           for(k=0;k<2;k++){
-           System.out.print(data_jual[i][j][k]);
-           System.out.print("\t");
-           }
-           System.out.println();
-           }
-           System.out.println();
-           }
-           System.out.println("--------------------------------------");
-           System.out.println();
-           }
-           
-           
-           
-         
+        // 3. Menampilkan seluruh data nilai
+        System.out.println("--- Seluruh Data Nilai ---");
+        for (int i = 0; i < jmlKelas; i++) {
+            System.out.println("Kelas " + (i + 1) + ":");
+            for (int j = 0; j < jmlMahasiswa; j++) {
+                System.out.print("  Mahasiswa " + (j + 1) + ": ");
+                for (int k = 0; k < jmlSemester; k++) {
+                    System.out.print(nilai[i][j][k] + " ");
+                }
+                System.out.println();
+            }
+        }
+
+        // 4. Menghitung rata-rata nilai per kelas
+        System.out.println("\n--- Rata-rata Nilai Per Kelas ---");
+        for (int i = 0; i < jmlKelas; i++) {
+            double totalPerKelas = 0;
+            int jumlahDataPerKelas = jmlMahasiswa * jmlSemester;
+
+            for (int j = 0; j < jmlMahasiswa; j++) {
+                for (int k = 0; k < jmlSemester; k++) {
+                    totalPerKelas += nilai[i][j][k];
+                }
+            }
+
+            double rataRata = totalPerKelas / jumlahDataPerKelas;
+            System.out.printf("Rata-rata Kelas %d: %.2f\n", (i + 1), rataRata);
+        }
+
+        input.close();
+    }
 }
 
 
